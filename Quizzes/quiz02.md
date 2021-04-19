@@ -145,8 +145,8 @@ y = x
 
 1. [ ] One object, one reference
 1. [ ] Two objects, one reference
-1. [ ] Two objects, two references
-1. [ X ] One object, two references
+1. [ X ] Two objects, two references
+1. [  ] One object, two references
 
 **PEP8 recommend which of the following styles for multi-word variable names:**
 
