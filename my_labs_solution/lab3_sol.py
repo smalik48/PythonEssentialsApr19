@@ -7,7 +7,7 @@ def add(fnum, snum):
     print(e)
     print('something went wrong')
   finally:
-    print(f'Result:{result}')
+    return result
 
 def sub(fnum, snum):
   try:
@@ -17,7 +17,7 @@ def sub(fnum, snum):
     print(e)
     print('something went wrong')
   finally:
-    print(f'Result:{result}')
+    return result
 
 def mul(fnum, snum):
   try:
@@ -27,7 +27,7 @@ def mul(fnum, snum):
     print(e)
     print('something went wrong')
   finally:
-    print(f'Result:{result}')
+    return result
 
 def div(fnum, snum):
   try:
@@ -41,19 +41,19 @@ def div(fnum, snum):
     print(ex)
     print('something went wrong')
   finally:
-    print(f'Result:{result}')
+    return result
   
 
 def calculate(operation, fnum, snum):
   if(operation in ('+', '-', '*', '/')):
     if(operation == '+'):
-      add(fnum, snum)
+      return add(fnum, snum)
     elif (operation == '-'):
-      sub(fnum, snum)
+      return sub(fnum, snum)
     elif (operation == '*'):
-      mul(fnum, snum)
+      return mul(fnum, snum)
     else:
-      div(fnum, snum)
+      return div(fnum, snum)
   else:
     print(f'Operation not supported, {operation}\nOperations supported are : +, -, *, /')
 
@@ -64,7 +64,8 @@ def main():
     fnum = input("Please enter First Num: ")
     snum = input("Please enter the Second Num: ")
     #calculate
-    calculate(operation, fnum, snum)
+    result = calculate(operation, fnum, snum)
+    print(f'Result: {result}')
 
 if __name__ == "__main__":
     main()
